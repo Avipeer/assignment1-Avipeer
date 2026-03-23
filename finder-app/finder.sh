@@ -27,6 +27,6 @@ fi
 
 #use find to search for all directories, wc -l counts the number of paths found
 #X is the amount of folders and subfolders in the path
-X=$(find $filesdir -mindepth 1 -not -name ".*.sw*" -type f | wc -l)
+X=$(find $filesdir -mindepth 1 -type f | wc -l)
 Y=$(grep -r $searchstr $filesdir | wc -l) 
 echo  "The number of files are ${X} and the number of matching lines are ${Y}" 
